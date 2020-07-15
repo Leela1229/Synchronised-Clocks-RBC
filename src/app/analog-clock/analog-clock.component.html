@@ -1,0 +1,67 @@
+<div class="wrapper">
+  <div style="margin-left:20px;margin-top:20px;">
+    <img style="height:100px" src="https://www.rbcroyalbank.com/dvl/v1.0/assets/images/logos/rbc-logo-shield.svg">
+    <button class="resetButton" (click)="reset()">Reset</button>
+  </div>
+  <div class="frame-work">
+    <!--Analog clock-->
+    <div class="clock">
+      <div class="num num1">
+        <div>1</div>
+      </div>
+      <div class="num num2">
+        <div>2</div>
+      </div>
+      <div class="num num3">
+        <div>3</div>
+      </div>
+      <div class="num num4">
+        <div>4</div>
+      </div>
+      <div class="num num5">
+        <div>5</div>
+      </div>
+      <div class="num num6">
+        <div>6</div>
+      </div>
+      <div class="num num7">
+        <div>7</div>
+      </div>
+      <div class="num num8">
+        <div>8</div>
+      </div>
+      <div class="num num9">
+        <div>9</div>
+      </div>
+      <div class="num num10">
+        <div>10</div>
+      </div>
+      <div class="num num11">
+        <div>11</div>
+      </div>
+      <div class="num num12">
+        <div>12</div>
+      </div>
+      <div class="hr-hand" [ngStyle]="hourHandStyle"></div>
+      <div class="min-hand" [ngStyle]="minuteHandStyle"></div>
+      <div class="sec-hand" [ngStyle]="secondHandStyle"></div>
+    </div>
+     <!--Analog clock Ends-->
+     <!--Analog clock buttons-->
+    <div>
+      <input type="time" id="appt" name="appt" step=1>
+      <button class="syncTime" (click)="syncAnalog()" id=syncAnalog>Sync Analog</button>
+    </div>
+    <!--Analog clock buttons Ends-->
+     <!--Digital clock-->
+    <div class="digital-clock">{{format(hour)}}:{{format(minute)}}:{{format(second)}}
+    </div>
+     <!--Digital clock Ends-->
+     <!--Digital clock buttons-->
+    <div>
+      <input type="time" id="appt1" name="appt1" step=1>
+      <button class="syncTime" (click)="syncDigital()" id=syncDigital>Sync Digital</button>
+    </div>
+    <!--Digital clock buttons Ends-->
+  </div>
+</div>
